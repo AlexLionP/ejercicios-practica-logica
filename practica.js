@@ -3,6 +3,24 @@
 //and a list of their favorite movies. Store the information and then 
 //showcase it in the console. Take note that the output for the films 
 //should add a small message like: 'The film {film} is one of my favorites'.
+const prompt = require("prompt-sync")();
+let username = prompt("What's your username?");
+let age = prompt("How old are you?");
+let numberMovies = prompt("How many favorite movies do you have?");
+let numberMoviesN = Number(numberMovies);
+for(i=0; i==numberMoviesN; i++){
+    let favoriteMovies = prompt("What are your favorite movies?");
+    arrayMovies = [];
+    arrayMovies.push(favoriteMovies);
+}
+//let favoriteMovies = prompt("What are your favorite movies?");
+//function message(username,age,favoriteMovies){
+    console.log(`Your username is ${username}`);
+    console.log(`Your age is ${age}`);
+
+    console.log(`Your favorite movies are ${favoriteMovies}`);
+//}
+
 
 //Highest number
 //Write a program that asks for 10 numbers. Using logical operators 
