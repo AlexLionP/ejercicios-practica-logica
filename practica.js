@@ -4,29 +4,45 @@
 //showcase it in the console. Take note that the output for the films 
 //should add a small message like: 'The film {film} is one of my favorites'.
 const prompt = require("prompt-sync")();
-let username = prompt("What's your username?");
-let age = prompt("How old are you?");
-let numberMovies = prompt("How many favorite movies do you have?");
+function userProfile(){
+let username = prompt("What's your username? ");
+let age = prompt("How old are you? ");
+let numberMovies = prompt("How many favorite movies do you have? ");
 let numberMoviesN = Number(numberMovies);
-for(i=0; i==numberMoviesN; i++){
-    let favoriteMovies = prompt("What are your favorite movies?");
-    arrayMovies = [];
-    arrayMovies.push(favoriteMovies);
+let arrayMovies = [];
+for(i=0; i<numberMoviesN; i++){
+    let favoriteMovies = prompt("What are your favorite movies? ");
+    arrayMovies.push(favoriteMovies);}
+console.log(`Your username is ${username}`);
+console.log(`Your age is ${age}`);
+console.log(`Your favorite movies are ${arrayMovies.join(", ")}`);
 }
-//let favoriteMovies = prompt("What are your favorite movies?");
-//function message(username,age,favoriteMovies){
-    console.log(`Your username is ${username}`);
-    console.log(`Your age is ${age}`);
-
-    console.log(`Your favorite movies are ${favoriteMovies}`);
-//}
-
-
+//userProfile()
+//*************************************************************************************
 //Highest number
 //Write a program that asks for 10 numbers. Using logical operators 
 //and any other javascript functions/structures you've seen before, 
 //determine and output the highest of those numbers.
-
+function highestNumber(){
+console.log("Me vas a decir 10 números");
+let arrayNumeros = [];
+let highest = Number.MIN_SAFE_INTEGER;
+for(i=0; i<10; i++){
+    let listaNumeros = prompt("Dime un número ");
+    let numeros = Number(listaNumeros);
+    arrayNumeros.push(numeros);
+    if(arrayNumeros[i]>highest){
+        highest = numeros;
+        console.log(`The highest number is now ${highest}`);
+    }
+    else{
+        console.log(`The highest number is still ${highest}`);
+    }
+}
+console.log(`The highest number is ${highest}`);
+}
+//highestNumber();
+//********************************************************************************* */
 //Alarm
 //Write a program that asks a user for the amount of seconds needed 
 //until an alarm (message) is executed alongside a text to show 
