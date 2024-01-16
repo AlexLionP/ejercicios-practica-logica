@@ -48,6 +48,21 @@ console.log(`The highest number is ${highest}`);
 //until an alarm (message) is executed alongside a text to show 
 //once those seconds have passed in real time.
 //Result example: "Time for bed after 10 seconds".
+function alarm(){
+    let seconds = prompt("Tell me how many seconds you want to sent off the alarm ");
+    console.log(`Time for bed after ${seconds} seconds`)
+    //La función setTimeout() ejecuta una acción despues de un determinado numero de milisegundos
+    //es decir, es un "delay" para la ejecución.
+    setTimeout(() => {
+        console.log("Go to bed");
+    }, 1000*seconds);
+}
+//alarm(); 
+
+// setTimeout(() => {
+//     console.log("1st message");
+// }, 5000);
+
 //********************************************************************************** */
 //Palindrome
 //Write a program that prompts for a word or sentence (it can be capitalized, 
@@ -56,6 +71,9 @@ console.log(`The highest number is ${highest}`);
 function isPalindrome(){
  let oracion = prompt("Tell me a word or a sentence ");
  let oracionMinus = oracion.toLowerCase();
+ //El método .replace() esta relacionado con las expresiones regulares por lo que la 
+ //siguiente línea de codigo hará ignorará los espacion y puntuaciones que se hayen en
+ // oracionSoloLetras
  let oracionSoloLetras = oracionMinus.replace(/[^\w]/g, '')
  let palindrome = true;
  let len = oracionSoloLetras.length;
@@ -68,7 +86,7 @@ function isPalindrome(){
  }
 console.log(`Palindrome is ${palindrome}`);
 }
-isPalindrome();
+//isPalindrome();
 //*************************************************************************************/
 //Factorial
 //Write a program that prompts for an intenger number n. Where  1 <= n. 
@@ -92,3 +110,10 @@ function calcFactorial(){
 //(makes it a 1D array). Use any type of algorithm you want like callbacks, 
 //recursion, etc...
 //let multiDimension = [1, [2, 3, [4, 5, [6]]]];
+function flatArray(){
+    let multiDimension = [1, [2, 3, [4, 5, [6]]]];
+    //El método .flat(n) regresa un nuevo sub arreglo concatenados de forma recursiva hasta la dimensión solicitada
+    let flat = multiDimension.flat(3);
+    console.log(flat);
+}
+//flatArray();
