@@ -58,11 +58,6 @@ function alarm(){
     }, 1000*seconds);
 }
 //alarm(); 
-
-// setTimeout(() => {
-//     console.log("1st message");
-// }, 5000);
-
 //********************************************************************************** */
 //Palindrome
 //Write a program that prompts for a word or sentence (it can be capitalized, 
